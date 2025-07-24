@@ -19,7 +19,7 @@ Este repositório demonstra como criar aplicações Java com capacidades de **Cl
 
 ## 🤖 O que é MCP?
 
-O **Model Context Protocol (MCP)** é um protocolo que define um padrão de conexão de modelos de linguagem a contextos e ferramentas. Suas principais características incluem:
+O **Model Context Protocol (MCP)** é um protocolo que define um padrão de conexão de modelos de linguagem a contextos e ferramentas.
 
 ## 📦 Projetos Incluídos
 
@@ -29,8 +29,7 @@ O **Model Context Protocol (MCP)** é um protocolo que define um padrão de cone
 **Características:**
 
 - Integração direta com API Gemini
-- Interface de console interativa
-- Tratamento de erros robusto
+- Interface de console 
 
 ### 2. ChatMCPGemini4J
 
@@ -40,17 +39,15 @@ O **Model Context Protocol (MCP)** é um protocolo que define um padrão de cone
 - Suporte a múltiplos servidores MCP
 - Seleção automática de ferramentas
 - Function calling com Gemini
-- System prompts inteligentes
 
 ### 3. ChatMCPGroq4J ⭐
 
 **Descrição:** Cliente MCP avançado com Groq LLM  
 **Características:**
 
-- Integração com Groq para inferência rápida
-- Workflow completo: Query → Tool Selection → MCP Execution
+- Integração com Groq 
+- Workflow : Query → Tool Selection → MCP Execution
 - Chaining de múltiplas ferramentas
-- Tempo médio de execução: 2-3 segundos
 
 ### 4. MCPClient
 
@@ -59,7 +56,7 @@ O **Model Context Protocol (MCP)** é um protocolo que define um padrão de cone
 
 - Exemplo simples de uso do Java MCP SDK
 - Conexão com servidor filesystem
-- Operações básicas de arquivo
+- Operação básicas de arquivo
 
 ## 🏗️ Arquitetura
 
@@ -80,15 +77,6 @@ graph TD
     style C fill:#85c1ff
 ```
 
-### Fluxo de Execução:
-
-1. **USER INPUT** - Captura query via console
-2. **GROQ SERVICE** - Análise + tools disponíveis
-3. **TOOL SELECTION** - LLM decide ferramentas via function calling
-4. **MCP EXECUTION** - Executa tool via cliente MCP síncrono
-5. **RESULT PROCESSING** - Formata resposta + tempo execução
-6. **CONSOLE OUTPUT** - Exibe resultado ao usuário
-
 ## 🔧 Pré-requisitos
 
 - **Java 17+**
@@ -103,7 +91,7 @@ graph TD
 1. **Clone o repositório:**
    
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/gazolla/JavaMCPClient
    cd WRKGRPMCP
    ```
 
@@ -118,14 +106,9 @@ graph TD
    ```bash
    # Servidor filesystem
    npm install -g @modelcontextprotocol/server-filesystem
+   npm install -g @modelcontextprotocol/server-weather
    
    ```
-
-# Servidor weather (exemplo)
-
-npm install -g @modelcontextprotocol/server-weather
-
-```
 
 ## ⚙️ Configuração
 
@@ -161,26 +144,12 @@ mvn clean compile exec:java
 - `"Salve as informações do tempo em um arquivo"`
 - `"Leia o arquivo que acabei de criar"`
 
-### ChatMCPGemini4J
-
-```bash
-cd ChatMCPGemini4J
-mvn clean compile exec:java
-```
-
-### AiChat
-
-```bash
-cd AiChat
-mvn clean compile exec:java
-```
-
 ## 🌐 Recursos Externos
 
 - **[Groq.com](https://groq.com/)** - LLM rápido para inferência
 - **[MCP Servers](https://mcpservers.org)** - Catálogo de servidores MCP
 - **[Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)** - SDK oficial Anthropic
-- **[Spring AI](https://spring.io/projects/spring-ai)** - Framework colaborador
+- 
 
 ## 🤝 Contribuindo
 
@@ -193,3 +162,5 @@ mvn clean compile exec:java
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para detalhes.
+
+

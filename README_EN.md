@@ -21,7 +21,7 @@ This repository demonstrates how to create Java applications with **Agent Client
 
 ## 🤖 What is MCP?
 
-The **Model Context Protocol (MCP)** is a protocol that defines a standard for connecting language models to contexts and tools. Its main characteristics include:
+The **Model Context Protocol (MCP)** is a protocol that defines a standard for connecting language models to contexts and tools. 
 
 ## 📦 Included Projects
 
@@ -32,7 +32,6 @@ The **Model Context Protocol (MCP)** is a protocol that defines a standard for c
 
 - Direct integration with Gemini API
 - Interactive console interface
-- Robust error handling
 
 ### 2. ChatMCPGemini4J
 
@@ -42,17 +41,15 @@ The **Model Context Protocol (MCP)** is a protocol that defines a standard for c
 - Multiple MCP servers support
 - Automatic tool selection
 - Function calling with Gemini
-- Intelligent system prompts
 
 ### 3. ChatMCPGroq4J ⭐
 
 **Description:** Advanced MCP client with Groq LLM  
 **Features:**
 
-- Groq integration for fast inference
-- Complete workflow: Query → Tool Selection → MCP Execution
+- Groq integration 
+- workflow: Query → Tool Selection → MCP Execution
 - Multiple tool chaining
-- Average execution time: 2-3 seconds
 
 ### 4. MCPClient
 
@@ -61,7 +58,7 @@ The **Model Context Protocol (MCP)** is a protocol that defines a standard for c
 
 - Simple example using Java MCP SDK
 - Filesystem server connection
-- Basic file operations
+- Basic file operation
 
 ## 🏗️ Architecture
 
@@ -96,7 +93,7 @@ graph TD
 1. **Clone the repository:**
    
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/gazolla/JavaMCPClient
    cd WRKGRPMCP
    ```
 
@@ -111,14 +108,8 @@ graph TD
    ```bash
    # Filesystem server
    npm install -g @modelcontextprotocol/server-filesystem
-   
+   npm install -g @modelcontextprotocol/server-weather
    ```
-
-# Weather server (example)
-
-npm install -g @modelcontextprotocol/server-weather
-
-```
 
 ## ⚙️ Configuration
 
@@ -154,26 +145,11 @@ mvn clean compile exec:java
 - `"Save weather information to a file"`
 - `"Read the file I just created"`
 
-### ChatMCPGemini4J
-
-```bash
-cd ChatMCPGemini4J
-mvn clean compile exec:java
-```
-
-### AiChat
-
-```bash
-cd AiChat
-mvn clean compile exec:java
-```
-
 ## 🌐 External Resources
 
 - **[Groq.com](https://groq.com/)** - Fast LLM for inference
 - **[MCP Servers](https://mcpservers.org)** - MCP server catalog
 - **[Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)** - Official Anthropic SDK
-- **[Spring AI](https://spring.io/projects/spring-ai)** - Collaborating framework
 
 ## 🤝 Contributing
 
@@ -186,3 +162,5 @@ mvn clean compile exec:java
 ## 📝 License
 
 This project is under the MIT License. See the `LICENSE` file for details.
+
+
