@@ -22,7 +22,7 @@ Este repositório contém exemplos práticos de implementação de clientes MCP 
 
 ```bash
 # Clone o repositório
-git clone <repository-url>
+git clone https://github.com/gazolla/JavaMCPClient.git
 
 # Navegue para um projeto
 cd ChatMCPGroq4J
@@ -41,4 +41,6 @@ mvn clean compile exec:java
 
 ---
 
-**Desenvolvido por / Developed by:** [Seu Nome]  
+**Desenvolvido por / Developed by:** [gazolla](https://github.com/gazolla)  
+
+
