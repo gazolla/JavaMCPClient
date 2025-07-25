@@ -49,7 +49,18 @@ public class MCPServers implements AutoCloseable {
         new ServerTemplate("memory", "npx @modelcontextprotocol/server-memory", 
                           "stdio", "Armazenamento temporário em memória", 1, "REQUIRES_NODEJS"),
         new ServerTemplate("weather-nws", "npx @h1deya/mcp-server-weather", 
-                          "stdio", "Previsões meteorológicas via National Weather Service (EUA)", 1, "REQUIRES_NODEJS")
+                          "stdio", "Previsões meteorológicas via National Weather Service (EUA)", 1, "REQUIRES_NODEJS"),
+         new ServerTemplate("calculator", "uvx calculator-mcp-server",
+        		 			"stdio", "Calculadora matemática", 1, "REQUIRES_PYTHON"),
+         new ServerTemplate("web-fetch", "uvx mcp-server-fetch",
+        		    		"stdio", "Busca web oficial sem browser", 2, "REQUIRES_PYTHON,REQUIRES_ONLINE"),
+         new ServerTemplate("rss-feeds", "uvx mcp-server-rss",
+        		    		"stdio", "Feeds RSS básicos", 1, "REQUIRES_PYTHON,REQUIRES_ONLINE"),
+         new ServerTemplate("datetime", "uvx mcp-server-time",
+        		    		"stdio", "Data e hora via MCP", 1, "REQUIRES_PYTHON"),
+     //   new ServerTemplate("coingecko", "npx mcp-remote https://mcp.api.coingecko.com/sse", 
+       //         "stdio", "Dados de criptomoedas via CoinGecko API", 2, "REQUIRES_NODEJS,REQUIRES_ONLINE")
+
     };
     
     public MCPServers(MCPService mcpService) {

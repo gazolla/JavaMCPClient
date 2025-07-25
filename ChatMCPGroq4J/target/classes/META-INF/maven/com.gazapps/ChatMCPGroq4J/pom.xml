@@ -12,6 +12,10 @@
     </properties>
     
     <repositories>
+	    <repository>
+	        <id>local-repo</id>
+	        <url>file://${project.basedir}/lib</url>
+	    </repository>
         <repository>
             <id>spring-milestones</id>
             <url>https://repo.spring.io/milestone</url>

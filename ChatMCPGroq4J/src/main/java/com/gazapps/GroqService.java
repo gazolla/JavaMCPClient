@@ -101,19 +101,20 @@ public class GroqService {
 		// Seção de coordenação multi-MCP (apenas se múltiplos servidores)
 		if (connectedServers.size() > 1) {
 			prompt.append("""
-					            TOOL EXECUTION METHODOLOGY:
-					1. ANALYZE the user query to identify required operations
-					2. PLAN the sequence of tools needed
-					3. EXECUTE tools in order, using real results as inputs for subsequent tools
-					4. BUILD final response using actual data from tool executions
-
-					TOOL CHAINING RULES:
-					- Execute ONE tool at a time
-					- Wait for each tool to complete and return actual results
-					- Use the REAL OUTPUT from Tool N as input parameter for Tool N+1
-					- Continue chaining until the complete workflow is finished
-					- Your final response must incorporate ACTUAL DATA from tool executions
-
+					TOOL CHAINING PROCESS:
+					1. ANALYZE query → identify operations needed
+					2. EXECUTE tools sequentially using real outputs as inputs
+					3. EXTRACT specific values from results (e.g., {"price": 100} → use 100)
+					4. BUILD response with actual data
+					5. Flow: Data → Tool A → Result A → Tool B → Result B → Tool C → Final Output
+					6. On failure: inform user and continue
+					
+					RULES:
+					- One tool at a time
+					- Use Tool A output as Tool B parameter  
+					- Continue until workflow complete
+					- Include real data in final response
+					
 					CRITICAL: NEVER use placeholder text like ${tool_name} in your responses.
 					Always use the real data returned by tools.
 
@@ -130,16 +131,7 @@ public class GroqService {
 					Step 3: Execute database_save with processed results from step 2
 					Step 4: Respond with what was actually accomplished
 
-					MULTI-MCP COORDINATION:
-					- Plan complete workflows before execution
-					- Chain tools logically: READ → PROCESS → TRANSFORM → STORE
-					- Each tool receives real output from previous tool as input
-					- Never save query parameters - save actual results
-					- If a tool fails, inform user and ask if they want to continue
-
-					DATA FLOW PRINCIPLE:
-					Real Data → Tool A → Real Result A → Tool B → Real Result B → Tool C → Final Output
-
+					
 					            """);
 		}
 

@@ -3,10 +3,19 @@ package com.gazapps;
 import java.util.Scanner;
 
 public class App {
+	
+	
        private GroqService service;
        
        public App() throws Exception {
+    	   System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "NONE");
+    	   System.setProperty("org.slf4j.simpleLogger.showDateTime", "true");
+    	   System.setProperty("org.slf4j.simpleLogger.dateTimeFormat", "yyyy-MM-dd HH:mm:ss");
+    	   System.setProperty("org.slf4j.simpleLogger.showThreadName", "false");
+    	   System.setProperty("org.slf4j.simpleLogger.showLogName", "false");
+    	   System.setProperty("org.slf4j.simpleLogger.showShortLogName", "true");
     	   this.service = new GroqService();
+    	   
        }
 
 	
