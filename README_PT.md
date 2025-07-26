@@ -110,6 +110,19 @@ graph TD
    
    ```
 
+4. **Caminho da biblioteca:**
+     Altere a linha:
+   
+   ```xml
+   <systemPath>C:/Users/gazol/AppData/MCP/WRKGRPMCP/ChatMCPGroq4J/lib/GroqClient4J-core-1.0.0-SNAPSHOT-jar-with-dependencies.jar</systemPath>
+   ```
+   
+   Para o caminho real do seu projeto:
+   
+   ```xml
+   <systemPath>SEU_CAMINHO_DO_PROJETO/lib/GroqClient4J-core-1.0.0-SNAPSHOT-jar-with-dependencies.jar</systemPath>
+   ```
+
 ## ⚙️ Configuração
 
 ### 1. Variáveis de Ambiente
@@ -162,5 +175,3 @@ mvn clean compile exec:java
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para detalhes.
-
-

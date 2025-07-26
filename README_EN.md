@@ -110,6 +110,19 @@ graph TD
    npm install -g @modelcontextprotocol/server-filesystem
    npm install -g @modelcontextprotocol/server-weather
    ```
+   
+   4. **Dependence path:**
+        Change the line:
+   
+   ```xml
+   <systemPath>C:/Users/gazol/AppData/MCP/WRKGRPMCP/ChatMCPGroq4J/lib/GroqClient4J-core-1.0.0-SNAPSHOT-jar-with-dependencies.jar</systemPath>
+   ```
+   
+   To your actual project path:
+   
+   ```xml
+   <systemPath>YOUR_PROJECT_PATH/lib/GroqClient4J-core-1.0.0-SNAPSHOT-jar-with-dependencies.jar</systemPath>
+   ```
 
 ## ⚙️ Configuration
 
@@ -162,5 +175,3 @@ mvn clean compile exec:java
 ## 📝 License
 
 This project is under the MIT License. See the `LICENSE` file for details.
-
-

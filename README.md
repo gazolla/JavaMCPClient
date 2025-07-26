@@ -1,8 +1,8 @@
 # MCP Client em Java / MCP Client in Java
 
-Este repositório contém exemplos práticos de implementação de clientes MCP (Model Context Protocol) em Java, incluindo integração com diferentes LLMs e estratégias de seleção automática de ferramentas.
+Este repositório contém exemplos práticos de implementação de clientes MCP (Model Context Protocol) em Java, incluindo integração com diferentes LLMs.
 
-*This repository contains practical examples of MCP (Model Context Protocol) client implementations in Java, including integration with different LLMs and automatic tool selection strategies.*
+*This repository contains practical examples of MCP (Model Context Protocol) client implementations in Java, including integration with different LLMs.*
 
 ## 📚 Documentação / Documentation
 
@@ -42,5 +42,3 @@ mvn clean compile exec:java
 ---
 
 **Desenvolvido por / Developed by:** [gazolla](https://github.com/gazolla)  
-
-
